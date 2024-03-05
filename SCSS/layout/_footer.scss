@@ -1,0 +1,11 @@
+.footer {
+  @include flex(column, none, center);
+  min-height: 120px;
+  &__ul {
+    @include flex(row, space-around);
+    width: 100%;
+    a {
+      text-decoration: none;
+    }
+  }
+}

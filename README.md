@@ -1,15 +1,15 @@
-# Sass-template
+# Capstone 2
 
-## Sass template repository
+## Day 1
 
-## with 7-1 architecture
+![Day 1 Live Preview](<Screenshot 2024-03-05 011507.png>)
+Created html files for splash page and quiz page  
+Styled very little  
+Added JS logic to fetch API data as  
+JSON object and method to display on webpage
 
-Sass template to be used for future projects
-
-Abstracts - contains reusable mixins and variables  
-Base - contains reset and typography styles  
-Components- contains page components like navbar, buttons, etc.  
-Layout - contains styling for general layout of page including possible grid layouts, headers, and footer  
-Pages - contains page specific styles not included in the other folders  
-Themes - contains themes, or color palettes for styling  
-Vendors - contains any files concerning third-party style libraries
+- class constructor
+- async function  
+  Used ChatGPT to ask and implement suggestions
+- implemented proper JS casing
+  Used ChapGPT to add terninary operators to constructor

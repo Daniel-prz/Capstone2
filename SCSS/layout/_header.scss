@@ -1,0 +1,6 @@
+.header {
+  @include flex();
+  h1 {
+    @include font(2.2rem, Arial Black, none, rgb(25, 110, 180));
+  }
+}
