@@ -9,7 +9,15 @@ Added JS logic to fetch API data as
 JSON object and method to display on webpage
 
 - class constructor
-- async function  
+- async function
   Used ChatGPT to ask and implement suggestions
 - implemented proper JS casing
   Used ChapGPT to add terninary operators to constructor
+
+## Day 2
+
+![Day 2 Live Preview](<Screenshot 2024-03-05 235702.png>)
+Created button.scss  
+Added form to quiz.html  
+Styled a little more  
+Add JS logic to allow user input for fetching quiz

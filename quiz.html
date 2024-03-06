@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quizz</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="SCSS/main.css">
+</head>
+
+<body>
+    <!-- FLEXBOX -->
+    <div class="flex-layout">
+        <!-- HEADER -->
+        <header class="header">
+            <h1>Code Quizz</h1>
+        </header>
+        <!-- MAIN -->
+        <main class="quiz-main">
+            <section class="quiz-main__section1">
+                <h2>Lets Get Started</h2>
+                <form action="" id="quiz-form" class="quiz-form">
+                    <label for="category">Category -</label>
+                    <select name="category" id="category">
+                        <option value="html">HTML</option>
+                        <option value="javascript">JavaScript</option>
+                    </select>
+                    <label for="number"># of questions -</label>
+                    <select name="number" id="number">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                    </select>
+                    <label for="difficulty">Difficulty -</label>
+                    <select name="difficulty" id="difficulty">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                        <select name="" id=""></select>
+
+
+                        <button type="submit" class="submit">Start Quiz</button>
+                </form>
+            </section>
+
+            <!-- QUIZ DISPLAY -->
+            <div id="questions-display" class="questions-display"></div>
+        </main>
+        <!-- FOOTER -->
+
+        <footer class="footer">
+            <ul class="footer__ul">
+                <!-- LINKS -->
+                <li><a href="">GitHub</a></li>
+                <li>Copyright ©2024</li>
+                <li><a href="">LinkedIn</a></li>
+            </ul>
+        </footer>
+    </div>
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

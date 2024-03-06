@@ -1,0 +1,13 @@
+.splash-main {
+  @include flex(column, center, center);
+  margin-top: 155px;
+  margin-bottom: 215.5px;
+  a {
+    @include font(2rem, Monospace, italic, rgb(202, 212, 218));
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
+}

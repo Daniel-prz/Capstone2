@@ -30,7 +30,7 @@ class Quiz {
   displayQuestions() {
     const questionContainer = document.getElementById("questions-display");
     questionContainer.innerHTML += `
-      <div>
+      <div class="question-container">
         <p>${this.question}</p>
         ${this.answer_a}
         ${this.answer_b}
@@ -44,7 +44,7 @@ class Quiz {
   }
 }
 
-async function fetchQuiz(difficulty, number, category) {
+async function fetchQuiz(category, number, difficulty) {
   try {
     const response = await fetch(
       `${BASE_URL}apiKey=${APIKEY}&difficulty=${difficulty}&limit=${number}&tags=${category}`
@@ -54,7 +54,14 @@ async function fetchQuiz(difficulty, number, category) {
     questions.forEach((question) => question.displayQuestions());
   } catch (error) {
     console.error("Error fetching quiz data:", error);
+    alert("Quiz not found, Try other options");
   }
 }
 
-fetchQuiz("Medium", 5, "HTML");
+// fetchQuiz("HTML", 5, "Easy");
+
+const form = document.getElementById("quiz-form");
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  fetchQuiz(form.category.value, form.number.value, form.difficulty.value);
+});

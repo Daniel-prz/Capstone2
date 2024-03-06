@@ -3,10 +3,11 @@
 @import "abstracts/mixins";
 @import "abstracts/variables";
 @import "components/navigation";
+@import "components/button";
 @import "layout/flex-layout";
 @import "layout/header";
 @import "layout/footer";
 @import "pages/splash";
-@import "pages/home";
+@import "pages/quiz";
 @import "themes/dark-mode";
 @import "vendors/bootstrap";
