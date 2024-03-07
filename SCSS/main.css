@@ -548,7 +548,7 @@ template {
 }
 
 body {
-  background-color: rgb(33, 33, 33);
+  background-color: rgb(28, 28, 28);
   color: rgb(212, 220, 220);
   font-family: sans-serif;
 }
@@ -563,6 +563,7 @@ body {
   justify-content: none;
   align-items: none;
   gap: none;
+  height: 100%;
 }
 
 .header {
@@ -580,7 +581,7 @@ body {
   font-size: 2.2rem;
   font-family: Arial Black, sans-serif;
   font-style: none;
-  color: rgb(79, 152, 224);
+  color: rgb(144, 184, 224);
   font-weight: bolder;
   margin-bottom: 20px;
 }
@@ -591,8 +592,11 @@ body {
   justify-content: none;
   align-items: center;
   gap: none;
+  position: absolute;
+  bottom: 0;
   min-height: 100px;
-  background-color: rgb(28, 28, 28);
+  width: 100%;
+  background-color: rgb(21, 21, 21);
 }
 .footer__ul {
   display: flex;
@@ -634,7 +638,6 @@ body {
   align-items: center;
   gap: none;
   margin-top: 155px;
-  margin-bottom: 215.5px;
 }
 .splash-main a {
   font-size: 2rem;
@@ -649,16 +652,25 @@ body {
 }
 
 .quiz-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: none;
   margin-top: 25px;
 }
 .quiz-main__section1 {
-  margin-left: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: none;
 }
 .quiz-main__section1 h2 {
   font-size: 1.8rem;
-  font-family: "Courier New", sans-serif;
+  font-family: "Segoe UI", sans-serif;
   font-style: italic;
   color: rgb(207, 207, 207);
   font-weight: bold;
-  margin-left: 25px;
+  margin-bottom: 25px;
 }/*# sourceMappingURL=main.css.map */

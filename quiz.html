@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Quizz</title>
+    <title>Code Quizz - </title>
     <!-- CSS -->
     <link rel="stylesheet" href="SCSS/main.css">
 </head>
@@ -14,13 +14,13 @@
     <div class="flex-layout">
         <!-- HEADER -->
         <header class="header">
-            <h1>Code Quizz</h1>
+            <h1>Code Quiz</h1>
         </header>
         <!-- MAIN -->
         <main class="quiz-main">
             <section class="quiz-main__section1">
-                <h2>Lets Get Started</h2>
-                <form action="" id="quiz-form" class="quiz-form">
+                <h2>Let's Get Started!</h2>
+                <form action="" id="quiz-options-form" class="quiz-options-form">
                     <label for="category">Category -</label>
                     <select name="category" id="category">
                         <option value="html">HTML</option>
@@ -42,9 +42,10 @@
                         <button type="submit" class="submit">Start Quiz</button>
                 </form>
             </section>
-
             <!-- QUIZ DISPLAY -->
-            <div id="questions-display" class="questions-display"></div>
+            <div id="questions-display" class="questions-display">
+                <form action="" class="quiz-form" id="quiz-form"></form>
+            </div>
         </main>
         <!-- FOOTER -->
 

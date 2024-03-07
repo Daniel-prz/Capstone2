@@ -1,7 +1,7 @@
 .header {
   @include flex();
   h1 {
-    @include font(2.2rem, Arial Black, none, rgb(79, 152, 224));
+    @include font(2.2rem, Arial Black, none, rgb(144, 184, 224));
 
     font-weight: bolder;
     margin-bottom: 20px;

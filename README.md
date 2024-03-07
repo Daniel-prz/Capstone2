@@ -21,3 +21,10 @@ Created button.scss
 Added form to quiz.html  
 Styled a little more  
 Add JS logic to allow user input for fetching quiz
+
+## Day 3
+
+![Day 3 Live Preview](<Screenshot 2024-03-07 002423.png>)
+Styled quiz.html  
+(JS)Added ChatGPT generated regex solution to class to fixed answer display issue
+Styled quiz output

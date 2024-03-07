@@ -1,5 +1,4 @@
 .flex-layout {
   @include flex(column);
+  height: 100%;
 }
-
-

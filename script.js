@@ -4,46 +4,71 @@ const APIKEY = "b0Utci4vbrVAhTKFFsrCYneNi4x2RG5TWsiYSdTF";
 class Quiz {
   constructor(quizData) {
     this.question = quizData.question;
-    this.answer_a = quizData.answers.answer_a
-      ? `<p>${quizData.answers.answer_a}</p>`
-      : "";
-    this.answer_b = quizData.answers.answer_b
-      ? `<p>${quizData.answers.answer_b}</p>`
-      : "";
-    this.answer_c = quizData.answers.answer_c
-      ? `<p>${quizData.answers.answer_c}</p>`
-      : "";
-    this.answer_d = quizData.answers.answer_d
-      ? `<p>${quizData.answers.answer_d}</p>`
-      : "";
-    this.answer_e = quizData.answers.answer_e
-      ? `<p>${quizData.answers.answer_e}</p>`
-      : "";
-    this.answer_f = quizData.answers.answer_f
-      ? `<p>${quizData.answers.answer_f}</p>`
-      : "";
-    this.answer_g = quizData.answers.answer_g
-      ? `<p>${quizData.answers.answer_g}</p>`
-      : "";
+    this.answer_a = this.formatAnswer(quizData.answers.answer_a);
+    this.answer_b = this.formatAnswer(quizData.answers.answer_b);
+    this.answer_c = this.formatAnswer(quizData.answers.answer_c);
+    this.answer_d = this.formatAnswer(quizData.answers.answer_d);
+    this.answer_e = this.formatAnswer(quizData.answers.answer_e);
+    this.answer_f = this.formatAnswer(quizData.answers.answer_f);
+    this.answer_g = this.formatAnswer(quizData.answers.answer_g);
   }
-
+  // Regex generated with ChatGPT
+  formatAnswer(answer) {
+    if (answer) {
+      // Use regex to replace < and > with HTML entities
+      return answer.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    } else {
+      return "";
+    }
+  }
+  // Method to display quiz
   displayQuestions() {
-    const questionContainer = document.getElementById("questions-display");
+    const questionContainer = document.getElementById("quiz-form");
     questionContainer.innerHTML += `
-      <div class="question-container">
-        <p>${this.question}</p>
-        ${this.answer_a}
-        ${this.answer_b}
-        ${this.answer_c}
-        ${this.answer_d}
-        ${this.answer_e}
-        ${this.answer_f}
-        ${this.answer_g}
-      </div>
-    `;
+    <div class="question-container">
+      <p>${this.question}</p>
+      ${
+        this.answer_a
+          ? `<label><input type="radio" name="answer" value="answer_a">${this.answer_a}</label><br>`
+          : ""
+      }
+      ${
+        this.answer_b
+          ? `<label><input type="radio" name="answer" value="answer_b">${this.answer_b}</label><br>`
+          : ""
+      }
+      ${
+        this.answer_c
+          ? `<label><input type="radio" name="answer" value="answer_c">${this.answer_c}</label><br>`
+          : ""
+      }
+      ${
+        this.answer_d
+          ? `<label><input type="radio" name="answer" value="answer_d">${this.answer_d}</label><br>`
+          : ""
+      }
+      ${
+        this.answer_e
+          ? `<label><input type="radio" name="answer" value="answer_e">${this.answer_e}</label><br>`
+          : ""
+      }
+      ${
+        this.answer_f
+          ? `<label><input type="radio" name="answer" value="answer_f">${this.answer_f}</label><br>`
+          : ""
+      }
+      ${
+        this.answer_g
+          ? `<label><input type="radio" name="answer" value="answer_g">${this.answer_g}</label><br>`
+          : ""
+      }
+      
+    </div>
+  `;
   }
 }
 
+// Fetches API data
 async function fetchQuiz(category, number, difficulty) {
   try {
     const response = await fetch(
@@ -58,10 +83,10 @@ async function fetchQuiz(category, number, difficulty) {
   }
 }
 
-// fetchQuiz("HTML", 5, "Easy");
-
-const form = document.getElementById("quiz-form");
+// Event listener for generating quiz on page
+const form = document.getElementById("quiz-options-form");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+  document.getElementById("quiz-form").innerHTML = ``;
   fetchQuiz(form.category.value, form.number.value, form.difficulty.value);
 });

@@ -1,11 +1,12 @@
 .quiz-main {
+  @include flex(column, center, center);
   &__section1 {
+    @include flex(column, center, center);
     h2 {
-      @include font(1.8rem, "Courier New", italic, rgb(207, 207, 207));
+      @include font(1.8rem, "Segoe UI", italic, rgb(207, 207, 207));
       font-weight: bold;
-      margin-left: 25px;
+      margin-bottom: 25px;
     }
-    margin-left: 25px;
   }
   margin-top: 25px;
 }
