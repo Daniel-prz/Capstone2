@@ -773,9 +773,16 @@ body {
   margin-top: 40px;
   margin-bottom: 15px;
 }
+.result-main__section1 p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: none;
+}
 .result-main__section1 .scored {
   margin-top: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   font-weight: bold;
   font-style: normal;
 }
