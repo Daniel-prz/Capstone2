@@ -1,3 +1,24 @@
-.submit {
+.submit-options {
+  @include font(1.4rem);
+  width: 150px;
+  height: 45px;
+  border-radius: 8px;
+  border: 1px solid rgb(83, 85, 89);
   color: antiquewhite;
+  font-weight: bold;
+  background-color: rgb(30, 34, 44);
+  &:hover {
+    background-color: rgb(32, 36, 51);
+  }
+}
+
+.submit-quiz {
+  @include font(1.3rem);
+  height: 40px;
+  width: 150px;
+  position: absolute;
+  bottom: 100px;
+  color: white;
+  background-color: rgb(41, 108, 86);
+  border-radius: 7px;
 }

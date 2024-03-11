@@ -1,12 +1,44 @@
 .quiz-main {
   @include flex(column, center, center);
+  margin-top: 25px;
+  margin-bottom: 150px;
+
   &__section1 {
     @include flex(column, center, center);
     h2 {
-      @include font(1.8rem, "Segoe UI", italic, rgb(207, 207, 207));
+      @include font(1.85rem, "Segoe UI", italic, rgb(207, 207, 207));
       font-weight: bold;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
+    }
+    .quiz-options-form {
+      @include flex(column, center, center, 10px);
+      @include font(1.3rem, sans-serif, none, rgb(243, 243, 243));
+      // .quiz-options {
+      // }
+      .quiz-options-container {
+        @include flex(row, center, center, 15px);
+        margin-bottom: 25px;
+      }
     }
   }
-  margin-top: 25px;
+  .questions-display {
+    .quiz-form {
+      @include flex(column, center);
+    }
+    margin-bottom: 25px;
+    @include flex(column, center, center);
+    .question-container {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      .question {
+        margin-top: 10px;
+        margin-bottom: 15px;
+        max-width: 550px;
+      }
+      label,
+      input {
+        margin-top: 4px;
+      }
+    }
+  }
 }
