@@ -13,12 +13,13 @@
       font-style: normal;
     }
     .result {
-      @include flex(row);
       @include font(3rem, Monospace, bold, rgb(196, 213, 223));
+      @include flex(row);
       font-style: normal;
       min-width: 200px;
     }
   }
+
   &__section2 {
     @include flex(column, center, center);
     p {
