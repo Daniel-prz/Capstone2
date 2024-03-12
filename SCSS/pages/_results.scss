@@ -12,9 +12,15 @@
       font-weight: bold;
       font-style: normal;
     }
-    .result {
+    // #result {
+    //   @include font(3rem, Monospace, bold, rgb(196, 213, 223));
+    //   @include flex(row);
+    //   font-style: normal;
+    //   min-width: 200px;
+    // }
+    p.result {
       @include font(3rem, Monospace, bold, rgb(196, 213, 223));
-      @include flex(row);
+      @include flex(row, center, center);
       font-style: normal;
       min-width: 200px;
     }
